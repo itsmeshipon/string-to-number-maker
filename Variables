@@ -3,3 +3,7 @@ function() {
   var n = parseFloat(s);                // convert to float
   return isNaN(n) ? undefined : n;      // undefined if invalid
 }
+
+
+
+https://docs.google.com/document/d/1-04-zMqgQZeFlBV-j8xCiAyuD_dgKEeDIk9P1hM7Els/edit?usp=sharing
