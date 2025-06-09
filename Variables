@@ -1,0 +1,25 @@
+function() {
+  // 1. Get the original string value from your GTM variable.
+  //    Replace '{{Your String Variable Name}}' with the actual variable you want to convert.
+  var originalString = {{Your String Variable Name}};
+
+  // 2. Handle potential null, undefined, or empty values to prevent errors.
+  if (originalString === undefined || originalString === null || String(originalString).trim() === '') {
+    return 0; // Return 0 or null as a default if the string is empty/invalid
+  }
+
+  // 3. Clean the string: Remove non-numeric characters (currency symbols, commas, spaces).
+  //    This regex keeps only digits, periods (for decimals), and hyphens (for negative numbers).
+  var cleanedString = String(originalString).replace(/[^0-9.-]+/g, "");
+
+  // 4. Convert the cleaned string to a floating-point number.
+  //    parseFloat() handles decimals, parseInt() would only get whole numbers.
+  var numericValue = parseFloat(cleanedString);
+
+  // 5. Ensure the result is a valid number. If not, return 0 or a safe default.
+  if (isNaN(numericValue)) {
+    return 0; // If conversion fails (e.g., cleaned string was still not a number), return 0
+  }
+
+  return numericValue;
+}
