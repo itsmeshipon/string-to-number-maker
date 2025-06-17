@@ -7,3 +7,17 @@ function() {
 
 
 https://docs.google.com/document/d/1-04-zMqgQZeFlBV-j8xCiAyuD_dgKEeDIk9P1hM7Els/edit?usp=sharing
+
+
+
+
+
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+ window.dataLayer.push({
+ "event" : "cf7submission",
+ "formId" : event.detail.contactFormId,
+ "response" : event.detail.inputs
+ })
+}); 
+</script>
