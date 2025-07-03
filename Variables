@@ -1,23 +1,8 @@
-function() {
-  var s = {{DLV – purchaseValue}};       // your string DL var
-  var n = parseFloat(s);                // convert to float
-  return isNaN(n) ? undefined : n;      // undefined if invalid
-}
 
 
-
-https://docs.google.com/document/d/1-04-zMqgQZeFlBV-j8xCiAyuD_dgKEeDIk9P1hM7Els/edit?usp=sharing
+https://docs.google.com/document/d/1Dsp_FJJI1LYRPLlhc77xz4ymew9yEcWwz1EBcLagSYg/edit?usp=sharing
 
 
 
 
 
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
- window.dataLayer.push({
- "event" : "cf7submission",
- "formId" : event.detail.contactFormId,
- "response" : event.detail.inputs
- })
-}); 
-</script>
